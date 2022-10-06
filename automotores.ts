@@ -1,3 +1,4 @@
+import * as fs from 'fs';
 class RegistroAutomotor {
     private marca: string ;
     private modelo: string; 
@@ -21,56 +22,74 @@ class RegistroAutomotor {
         }
     }
 }
-
-function crearAuto(Auto: string, arrayAutos: Array<RegistroAutomotor>): void {
-    //transformo el elemento de tipo string en un objeto de tipo Profesor
-    let autoAnotado = RegistroAutomotor.split (','); //[Juan Perez, 333333333, Karen Simari, 22222222]
-    let marca: string = RegistroAutomotor[0];
-    let año: number = Number(RegistroAutomotor[1]);
-  
-    //inserto el elemento de tipo Profesor en el arreglo recibido
-    arrayAutos.push();
-}
-
 class LectorDeArchivos {
+
     private arregloString: string[];
+
     constructor(txtFileLocation: string) {
+
         let archivoTxt: string = fs.readFileSync(txtFileLocation, 'utf-8');
-        this.arregloString = archivoTxt.split(';');  //vamos a tener nuestro "objetos" separados por ;
+        this.arregloString = archivoTxt.split(';');  
+       
     }
+
+
     public mostrarArreglo(): void {
         console.log(this.arregloString);
     }
+
     public getArregloString(): string[] {
         return this.arregloString;
     }
+
 }
 
+//funcion para crear un nuevo auto
 
-//Eliminar profesor en una posicion y agregar uno nuevo
-//instalamos readline-sync -- npm install readline-sync
-//function borrarAuto(RegistroAutomotor: Array<registroAutomotor>,  position: number  {
-    //editar un profesor en el arreglo
-    // let nombre: string = readlineSync.question("Ingrese el nombre: ")
-    // let DNI: number = Number(readlineSync.question("Ingrese el DNI: "));
-    // let listaAlumnos: Array<Alumno> = arregloAlumnos;
+function crearauto(auto: string, arrayAuto: Array<RegistroAutomotor>): void {
+
+    //transformo el elemento de tipo string en un objeto de tipo automotor
+    let propiedadAuto = auto.split(','); 
+    let marca: string = propiedadAuto[0];
+    let modelo: string = propiedadAuto[1];
+    let año: number = Number(propiedadAuto[2]);
+
+    let nuevoAuto : RegistroAutomotor = new RegistroAutomotor(marca,modelo,año);
+
+    //inserto el elemento de tipo auto en el arreglo recibido
+    arrayAuto.push(nuevoAuto);
+}
+function borrarAuto(arregloAuto: Array<RegistroAutomotor>,  position: number ): void {
+    //editar un auto en el arreglo
+     //let marca: string = (readlineSync.question("Ingrese marca: "));
+    // let modelo: string = (readlineSync.question("Ingrese modelo: "));
+     //let año: number = Number(readlineSync.question("ingrese año"));
    
-    // let nuevoProfe: Profesor = new Profesor(nombre,DNI,listaAlumnos);
-   // delete arregloAuto[position];
-    // arregloProfe[position] = nuevoProfe;
+    // let nuevoProfe: RegistroAutomotor = new RegistroAutomotor(marca,modelo,año);
+
+    delete arregloAuto[position];
+
+   //  arregloAuto[position] = nuevoAuto ;
  
-//}
-//Inicio programa
-let Datos: LectorDeArchivos = new LectorDeArchivos('autos.txt');
-let ArrayAutos: Array<RegistroAutomotor> = [];
-
-
-
-//creo array de objetos
-for (let i: number = 0; i < Datos.getArregloString().length; i++) {
-    //Creo auto uno por uno leyendo el txt
-    
-    crearAuto(Datos.getArregloString()[i], ArrayAutos);
 }
-console.log(ArrayAutos);
 
+
+//Inicio programa
+let dato: LectorDeArchivos = new LectorDeArchivos('autos.txt');
+let arrayAuto: Array<RegistroAutomotor> = [];
+let datos = new RegistroAutomotor("fiat","duna",1999);
+
+datos.estaAgregado();
+console.log(datos.getAño());
+console.log(datos);
+//creo array de objetos
+
+for (let i: number = 0; i < dato.getArregloString().length; i++) {
+
+    
+    
+    crearauto(dato.getArregloString()[i], arrayAuto );
+
+}
+
+console.log(arrayAuto);
