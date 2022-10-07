@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Gabrielortino22/CFS2022II/issues"
   },
-  "homepage": "https://github.com/Gabrielortino22/CFS2022II#readme"
+  "homepage": "https://github.com/Gabrielortino22/CFS2022II#readme",
+  "dependencies": {
+    "@types/node": "^18.8.2",
+    "readline-sync": "^1.4.10"
+  }
 }
