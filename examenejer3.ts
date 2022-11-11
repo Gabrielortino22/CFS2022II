@@ -1,3 +1,4 @@
+//ejercicio 3
 interface autoInterfaces{
     cantidadRuedas:number;
     velocidadActual:number;
@@ -7,22 +8,23 @@ interface autoInterfaces{
     }
     
     
-    class autoCarrera implements autoInterfaces{
+    class AutoCarrera implements autoInterfaces{
     
         cantidadRuedas= 4;
     
         velocidadActual=10;
         }
         
+    let Carrera: autoInterfaces;
     
     
     
-    
-    class autoFamiliar implements autoInterfaces{
+    class AutoFamiliar implements autoInterfaces{
     
         cantidadRuedas= 4;
     
         velocidadActual=10;
         
+
+   
     }
-    
