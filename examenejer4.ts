@@ -6,9 +6,11 @@ abstract class Televisor {
         this.color=color;
         this.canales=canales;
     }
+   public cambiarCanal(): void {
 
+   }
     
-    }
+}
     
     
   
