@@ -1,3 +1,4 @@
+//ejercicio 4 abstraccion
 abstract class Televisor {
     color:string;
     canales:number;

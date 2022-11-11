@@ -1,3 +1,4 @@
+//ejercicio 4 abstraccion
 var Televisor = /** @class */ (function () {
     function Televisor(color, canales) {
         this.color = color;

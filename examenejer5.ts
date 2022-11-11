@@ -1,3 +1,4 @@
+//ejercicio 5 herencia
 class Autos {
     private marca: string;
     private modelo: string;

@@ -13,6 +13,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+//ejercicio 5 herencia
 var Autos = /** @class */ (function () {
     function Autos(marca, modelo) {
         this.marca = marca;
