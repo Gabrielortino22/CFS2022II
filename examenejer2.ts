@@ -1,6 +1,6 @@
 //ejercicio 1 y 2
 
-class Auto {
+class Auto{
     private acelerador: number;
     private  freno:number;
     private color:string;
@@ -18,4 +18,4 @@ class Auto {
     }
 }
     let auto1 = new Auto( 10, 20, "verde"); 
-    console.log(auto1.acelerar());
+    console.log(auto1);

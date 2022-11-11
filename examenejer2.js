@@ -14,4 +14,4 @@ var Auto = /** @class */ (function () {
     return Auto;
 }());
 var auto1 = new Auto(10, 20, "verde");
-console.log(auto1.acelerar());
+console.log(auto1);
