@@ -1,4 +1,4 @@
-class auto {
+class Auto1 {
     acelerador : number;
     freno : number;
     estaPrendido: boolean;
@@ -13,22 +13,22 @@ class auto {
     frenar() : void {
         this.freno  = this.freno - 1; 
     }
-    apagarauto() {
+    apagarautos() {
         this.estaPrendido = false;
     }
-    prenderauto() {
+    prenderautos() {
         this.estaPrendido = true;
     }
     getandando() {
         return "esta andando a  " + this.freno;
     }
-    setauto(acelerar: number) {
+    setautos(acelerar: number) {
         this.acelerador = acelerar;
     }
 }
-let auto1 = new auto( 10, 20,  true);
-console.log(auto1.getandando())
-auto1.setauto(20);
-auto1.frenar();
-auto1.apagarauto();
-console.log(auto1);
+let auto11 = new Auto1( 10, 20, true );
+console.log(auto11.getandando())
+auto11.setautos(20);
+auto11.frenar();
+
+console.log(auto11);
